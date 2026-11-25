@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center;
+  padding: 24px 14px; color: #f8eafa;
+  background: radial-gradient(ellipse at 50% 10%, #30205f 0%, #100e36 48%, #07091f 100%);
+  font-family: ui-monospace, "Courier New", monospace;
+}
+.game-wrap { width: min(100%, 460px); text-align: center; }
+h1 { margin: 0; font-size: clamp(20px, 5vw, 29px); letter-spacing: 1px; text-transform: uppercase; }
+.subtitle { margin: 9px 0 20px; color: #c7b7e9; font-size: 13px; }
+.screen-frame {
+  display: inline-block; padding: 10px; border: 2px solid #71639c;
+  border-radius: 9px; background: #090b28;
+  box-shadow: 0 0 0 4px #17143d, 0 16px 45px #0009;
+  width: min(100%, 380px);
+}
+canvas {
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 4;
+  image-rendering: pixelated; image-rendering: crisp-edges;
+  cursor: pointer; touch-action: manipulation;
+}
+.controls { display: flex; justify-content: center; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+button {
+  border: 0; border-radius: 6px; padding: 12px 17px; cursor: pointer;
+  color: #25132e; background: #ff9bc7; font: 700 13px ui-monospace, monospace;
+  box-shadow: 0 4px 0 #b85e91; transition: transform .08s, filter .15s;
+}
+button:hover { filter: brightness(1.1); }
+button:active { transform: translateY(3px); box-shadow: 0 1px 0 #b85e91; }
+button.secondary { background: #b5c4ff; box-shadow: 0 4px 0 #7184c6; }
+.hint { margin: 17px 0 0; color: #c5badf; font-size: 11px; line-height: 1.6; }
